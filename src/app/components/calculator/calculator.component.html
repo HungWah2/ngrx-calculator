@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="calc-body">
+      <div class="calc-screen">
+        <div class="calc-typed">
+          <div>{{ (currentNumber$ | async)?.currentNumber ?? 0}}</div>
+          <br/>
+          <div class="calc-operation">{{ (currentNumber$ | async)?.operator ?? 0}}</div>
+          <br/>
+          <div>{{ (currentNumber$ | async)?.previousNumber ?? 0}}</div>
+  
+        </div>
+        <div class="calc-typed">
+          {{ (currentNumber$ | async)?.result ?? 0}}
+        </div>
+      </div>
+      <div class="calc-button-row">
+        <button mat-button class="button c" (click)="enterKey('DEL','operator')">DEL</button>
+        <button mat-button class="button l" (click)="enterKey('+/-','operator')">+/-</button>
+        <button mat-button class="button l" (click)="enterKey('%','operator')">%</button>
+        <button mat-button class="button l" (click)="enterKey('/','operator')">/</button>
+      </div>
+      <div class="calc-button-row">
+        <button mat-button class="button" (click)="enterKey('7','number')">7</button>
+        <button mat-button class="button" (click)="enterKey('8','number')">8</button>
+        <button mat-button class="button" (click)="enterKey('9','number')">9</button>
+        <button mat-button class="button l" (click)="enterKey('*','operator')">x</button>
+      </div>
+      <div class="calc-button-row">
+        <button mat-button class="button" (click)="enterKey('4','number')">4</button>
+        <button mat-button class="button" (click)="enterKey('5','number')">5</button>
+        <button mat-button class="button" (click)="enterKey('6','number')">6</button>
+        <button mat-button class="button l" (click)="enterKey('-','operator')">-</button>
+      </div>
+      <div class="calc-button-row">
+        <button mat-button class="button" (click)="enterKey('1','number')">1</button>
+        <button mat-button class="button" (click)="enterKey('2','number')">2</button>
+        <button mat-button class="button" (click)="enterKey('3','number')">3</button>
+        <button mat-button class="button l" (click)="enterKey('+','operator')">+</button>
+      </div>
+      <div class="calc-button-row">
+        <button mat-button class="button" (click)="enterKey('.','number')">.</button>
+        <button mat-button class="button" (click)="enterKey('0','number')">0</button>
+        <button mat-button class="button c" (click)="enterKey('C','operator')">C</button>
+        <button mat-button class="button l" (click)="enterKey('=','operator')">=</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <html>
+	<head>
+		<title>UI 004 - USSR Calculator</title>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+	</head>
+	<body>
+		<div class="calc" ng-app="appleCalculator" ng-controller="Calculator">
+			<div class="top-part">
+				<a target="_blank">Электроника С3-22</a>
+				<div class="back-toppart"></div>
+			</div>
+			<div class="window">
+				<div class="result">
+					<input class="readout" readonly disabled ng-model="console" maxlength="10">
+					<input class="placehold" type='readonly' disabled placeholder="888888888888888">
+				</div>
+				<div class="plane"></div>
+			</div>
+			<div class="section one">
+				<button class="key" ng-click="clearTotal()"><div class="key_before">СП</div></button>
+				<button class="key"><div class="key_before">П+</div></button>
+				<button class="key"><div class="key_before">ИП</div></button>
+				<button class="key_red" ng-click="clearTotal()"><div class="key_before_red">Сх</div></button>
+			</div>
+			<div class="section two">
+				<button class="key" ng-click="print(7)"><div class="key_before">7</div></button>
+				<button class="key" ng-click="print(8)"><div class="key_before">8</div></button>
+				<button class="key" ng-click="print(9)"><div class="key_before">9</div></button>
+				<button class="key" ng-click="print(4)"><div class="key_before">4</div></button>
+				<button class="key" ng-click="print(5)"><div class="key_before">5</div></button>
+				<button class="key" ng-click="print(6)"><div class="key_before">6</div></button>
+				<button class="key" ng-click="print(1)"><div class="key_before">1</div></button>
+				<button class="key" ng-click="print(2)"><div class="key_before">2</div></button>
+				<button class="key" ng-click="print(3)"><div class="key_before">3</div></button>
+
+				<button class="key_long" ng-click="print(0)"><div class="key_before_long">0</div></button>
+				<button class="key" ng-click="print('.')"><div class="key_before">,</div></button>
+			</div>
+			<div class="section three">
+				<button class="key" ng-click="add()"><div class="key_before">+</div></button>
+				<button class="key" ng-click="getPercentage()"><div class="key_before">%</div></button>
+				<button class="key" ng-click="subtract()"><div class="key_before">-</div></button>
+				<button class="key" ng-click="changePositivity()"><div class="key_before">/-/</div></button>
+				<button class="key_vertical" ng-click="equal()"><div class="key_before_vertical">=</div></button>
+				<button class="key" ng-click="multiply()"><div class="key_before">×</div></button>
+				<button class="key" ng-click="divide()"><div class="key_before">÷</div></button>
+			</div>
+			<div class="btm-part"></div>
+		</div>
+	</body>
+</html>	 -->
